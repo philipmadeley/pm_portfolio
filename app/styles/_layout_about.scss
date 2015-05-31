@@ -26,10 +26,10 @@
       width: 300px;
       height: 300px;
       @include center-block;
-      background: url("../assets/images/profile.jpg") no-repeat 0 -20px;
+      background: url("../images/profile.jpg") no-repeat 0 -20px;
       background-size: contain;
       &:hover {
-        background: url("../assets/images/profile1.jpg") no-repeat 0 -20px;
+        background: url("../images/profile1.jpg") no-repeat 0 -20px;
         //@include animate-prefixer(animation, fadeIn);
         background-size: cover;
       }

@@ -3,6 +3,10 @@
   "private": true,
   "dependencies": {
     "jquery": "~2.1.1",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "susy": "~2.2.5",
+    "breakpoint-sass": "~2.5.0",
+    "compass": "~0.5.1",
+    "modular-scale": "~2.0.9"
   }
 }

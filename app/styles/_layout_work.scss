@@ -1,0 +1,233 @@
+.site-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  }
+
+
+.work-nav {
+  position:fixed;
+  right: 0;
+  top: 0;
+  z-index:1;
+
+  a {
+    //background: transparent;
+    background: dark(.3);
+    position: relative;
+    display: block;
+    padding: 5px;
+    margin: 0 0 5px 0;
+
+    &:hover {
+      text-decoration:none;
+    }
+
+
+    span {
+      vertical-align: middle;
+      font-size: 1.4rem;
+      display: block;
+      line-height: 1;
+      //color: light(.3);
+      }
+  }
+
+}
+
+.work {
+
+  img {
+    display: block;
+
+  }
+  a {
+    @include links;
+
+  }
+  // globals  end
+
+  .top {
+    position: relative;
+
+    hgroup {
+      padding: 40px 20px 0;
+
+      h3 {
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+      h5 {
+        line-height: 1.6rem;
+        font-size: 1.2rem;
+      }
+
+    }
+    /* &:after {
+          background: dark(0.4);
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        } */
+    img {
+      //@include absolute(bottom 0);
+      //z-index: -1;
+    }
+
+  }
+  //top
+  article {
+    @include container(1200px);
+    background: $wt;
+    padding: 10px 20px 40px;
+    h5 {
+      margin-bottom: 10px;
+    }
+
+  }
+  //article
+  .photos {
+    img:first-child {
+      border-bottom: 1px solid $wt;
+    }
+
+  }
+  .ui {
+    background: dark(0.1);
+    @include full;
+    img {
+      padding: 10% 0;
+      @include container(800px);
+    }
+
+  }
+  footer {
+    a {
+      @include span(4 of 4);
+      text-align: center;
+      padding: 16px 0;
+      border-bottom: 1px solid dark(.1);
+      p {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+      span {
+        vertical-align: middle;
+        font-size: 1.4rem;
+        display: inline-block;
+        line-height: 1;
+      }
+    }
+  }
+
+}
+//end work mobile
+
+@include susy-breakpoint (340px, $mobile) {
+
+
+}
+@include susy-breakpoint (600px, $tablet) {
+  .work {
+
+    footer {
+      a {
+        @include span (3 of 9);
+        border-bottom: none;
+        border-right: 1px solid dark(.1);
+        &:last-child {
+          border:none;
+        }
+      }
+    }
+  }
+
+}
+@include susy-breakpoint (1024px, $laptop) {
+  .work {
+
+    .top {
+      text-align: center;
+      hgroup {
+        @include full();
+        position: absolute;
+        top: 0;
+        background: dark(.5);
+        padding: 30px 0;
+        h3,
+        h5 {
+          color: $wt;
+        }
+        h5 {
+          margin-bottom: 0;
+        }
+      }
+
+    }
+    // top
+    article {
+      .col1,
+      .col2 {
+        @include span(6);
+        padding: 40px 20px 0;
+        &:last-child {
+          padding-left: 40px;
+        }
+      }
+
+    }
+    .photos {
+      @include full;
+      img {
+        @include span(6 of 12);
+        &:first-child {
+          border-bottom: none;
+        }
+      }
+
+    }
+    .ui img {
+      padding: 60px;
+    }
+    .photos {
+      padding: 0;
+      img {
+        padding: 0;
+      }
+
+    }
+    footer {
+      @include container(1024px);
+    }
+
+  }//work
+}
+
+@include susy-breakpoint (1200px, $imac) {
+  .site-wrapper {
+  @include box-shadow (0 0 8px dark(0.1));
+  }
+}
+
+@include susy-breakpoint (1920px, $imac) {
+  .work {
+    .top, .photos {
+      @include container(1200px);
+      overflow: hidden;
+    }
+    .ui img {
+      padding: 100px;
+    }
+    footer {
+      @include container(1200px);
+
+    }
+
+  }
+  //work
+}

@@ -1,31 +1,20 @@
+@import 'normalize';
+
 // bower:scss
+@import "bower_components/susy/sass/_susy.scss";
+@import "bower_components/sassy-maps/sass/_sassy-maps.scss";
+@import "bower_components/breakpoint-sass/stylesheets/_breakpoint.scss";
+@import "bower_components/modular-scale/stylesheets/_modular-scale.scss";
 // endbower
 
-body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
-}
-
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-}
-
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+@import 'typeplate-sk/styles';
+@import 'vars';
+@import 'mixins';
+@import 'globals';
+@import 'layout_base';
+@import 'layout_nav';
+@import 'layout_home';
+@import 'layout_about';
+@import 'layout_work';
+@import 'icons';
+@import 'animate';

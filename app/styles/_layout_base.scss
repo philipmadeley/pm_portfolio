@@ -1,0 +1,48 @@
+/* Changing Susy default global settings */
+$susy: (
+  columns: 4,
+  global-box-sizing: border-box,
+  container: auto,
+  gutters: 1,
+  gutter-position: inside,
+/* debug: (
+  image: show,
+  color: rgba(#66f, .25),
+  output: background,
+  toggle: top right,
+  ),
+use-custom: (
+  background-image: false,
+  background-options: false,
+  box-sizing: true,
+  clearfix: false,
+  rem: true,
+  ) */
+  );
+
+
+// LAYOUT
+$mobile: (
+  columns: 4,
+  gutters: .25,
+);
+
+$tablet: (
+  columns: 8,
+  gutters: .25,
+  );
+
+$laptop: (
+  columns: 12,
+  gutters: .25,
+  );
+
+$imac: (
+  columns: 16,
+  gutters: .25,
+  );
+
+// .page {
+//   @include container(4);
+//   text-align:center;
+//   }

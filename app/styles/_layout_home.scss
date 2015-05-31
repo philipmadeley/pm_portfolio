@@ -1,0 +1,227 @@
+// HOME LAYOUT
+
+.showcase {
+    position: relative;
+    //width: 100%;
+    padding: 80px 0;
+    color: dark(0.9);
+    overflow: hidden;
+    box-sizing: border-box;
+    @include border (1px solid $wt, top);
+    max-height: 300px;
+
+    a {
+        text-decoration: none;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: dark(0.4); //rgba($an, .8); //
+        } //overlay
+        hgroup {
+            padding: 20px 10px;
+        }
+    } //a tag
+    h4, p {
+        text-align: center;
+        color: $wt;
+        position: relative;
+        z-index: 1;
+    }
+    p {
+        text-transform: uppercase;
+        margin-bottom: 1.5em;
+    }
+    h4:after {
+        background: $wt;
+        content: "";
+        display: block;
+        height: 2px;
+        margin: 16px auto;
+        position: relative;
+        width: 12px;
+    }
+} // end showcase
+
+$projects: ro an sb ob da ca;
+
+@each $project in $projects {
+  .project-#{$project} {
+    &:before{
+    @include bg-cover (projects/#{$project}_top);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    //-webkit-filter: blur(10px);
+    //filter: blur(10px);
+    //-moz-filter: blur(10px);
+    }
+    &:hover:before, &:active:before {
+      //-webkit-filter: blur(0px);
+      //filter: blur(0px);
+      //-moz-filter: blur(0px);
+      //@include transition(1s filter linear);
+      //@include transition(1s -webkit-filter linear);
+    }
+    a:hover:after, a:active:after {
+        @include transition(background-color 300ms 300ms, color 300ms);
+        background: dark(0.4);
+    }
+
+}
+}
+
+.project-ro {
+  a:after {
+        background: rgba($ro, .8);
+    }
+}
+.project-an {
+  a:after {
+        background: rgba($an, .8);
+    }
+}
+.project-sb {
+  a:after {
+        background: rgba($sb, .8);
+    }
+}
+.project-ob {
+  a:after {
+        background: rgba($ob, .8);
+    }
+}
+.project-da {
+  a:after {
+        background: rgba($da, .8);
+    }
+}
+.project-ca {
+  a:after {
+        background: rgba($ca, .8);
+    }
+}
+
+// TABLET
+@include susy-breakpoint (600px, $tablet) {
+    .container {
+      padding-top: 114px; //height of nav
+      section.showcase {
+        @include span(6 of 12);
+        border: 1px solid $wt;
+        &:last-child {
+          //use for uneven numbers  @include full();
+        }
+    }
+  }
+}
+//LAPTOP
+$fullWidth: layout(auto 12 .25 inside fluid isolate);
+
+@include susy-breakpoint (1024px, $laptop) {
+    .container {
+        @include layout($fullWidth fluid no-gutters);
+        display: flex;
+        overflow: hidden;
+        position: absolute;
+        width: auto;
+        overflow-y: hidden;
+
+        section.showcase {
+            @include span(2 of 10 fluid no-gutters);
+            border: none;
+            max-height: 100%;
+            clear:none;
+            height: 100vh;
+
+        &:last-child {
+            @include span(2 of 10);
+        }
+
+            hgroup {
+                white-space: normal;
+                height: 120px;
+                @include absolute(bottom 200px);
+                width: 100%;
+                left: 0;
+            }
+         &.project-an a:after {
+             background: rgba($an, .8);
+         }
+         &.project-sb a:after {
+             background: rgba($sb, .8);
+         }
+         &.project-ob a:after {
+             background: rgba($ob, .8);
+         }
+         &.project-da a:after {
+             background: rgba($da, .8);
+         }
+         &.project-ca a:after {
+             background: rgba($ca, .8);
+         }
+         a:hover:after {
+            background: dark(0.4); //rgba($an, .8); //
+         }
+
+        } // showcase
+    } //container
+} //end laptop
+//iMAC
+
+@include susy-breakpoint (1024px, $laptop) {
+    .container {
+        @include full(no-gutters);
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+
+        section.showcase {
+            @include span(2 of 10 fluid no-gutters);
+            border: none;
+            max-height: 100%;
+            clear: none;
+            height: 100vh;
+            &:last-child {
+                @include span(2 of 10);
+            }
+            hgroup {
+                white-space: normal;
+                height: 120px;
+                @include absolute(bottom 200px);
+                width: 100%;
+                left: 0;
+            }
+            &.project-an a:after {
+                background: rgba($an, .8);
+            }
+            &.project-sb a:after {
+                background: rgba($sb, .8);
+            }
+            &.project-ob a:after {
+                background: rgba($ob, .8);
+            }
+            &.project-da a:after {
+                background: rgba($da, .8);
+            }
+            &.project-ca a:after {
+                background: rgba($ca, .8);
+            }
+            a:hover:after {
+                background: dark(0.4); //rgba($an, .8); //
+            }
+        } // showcase
+    } //container
+} //end laptop
+//iMAC
+@include susy-breakpoint (1200px, $imac) {
+    section.showcase {
+        //@include span(2 of 10);
+    }
+}

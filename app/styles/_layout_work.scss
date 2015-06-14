@@ -17,21 +17,21 @@
     background: dark(.3);
     position: relative;
     display: block;
-    padding: 5px;
+    padding: 8px;
     margin: 0 0 5px 0;
 
     &:hover {
       text-decoration:none;
     }
 
-
-    span {
+    svg {
+      width: 25px;
+      height: 25px;
       vertical-align: middle;
-      font-size: 1.4rem;
+      margin: auto;
       display: block;
-      line-height: 1;
-      //color: light(.3);
-      }
+    }
+
   }
 
 }
@@ -45,7 +45,12 @@
   }
   a {
     @include links;
+  }
 
+  svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
   }
   // globals  end
 
@@ -117,12 +122,6 @@
       p {
         display: inline-block;
         margin-bottom: 0;
-      }
-      span {
-        vertical-align: middle;
-        font-size: 1.4rem;
-        display: inline-block;
-        line-height: 1;
       }
     }
   }
@@ -219,7 +218,7 @@
 @include susy-breakpoint (1920px, $imac) {
   .work {
     .top, .photos {
-      @include container(1200px);
+      //@include container(1200px);
       overflow: hidden;
     }
     .ui img {

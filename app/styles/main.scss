@@ -8,6 +8,7 @@
 // endbower
 
 @import 'typeplate-sk/styles';
+@import 'icons';
 @import 'vars';
 @import 'mixins';
 @import 'globals';
@@ -17,5 +18,5 @@
 @import 'layout_home';
 @import 'layout_about';
 @import 'layout_work';
-@import 'icons';
-@import 'animate';
+//@import 'animate';
+@import 'animsition/animsition';

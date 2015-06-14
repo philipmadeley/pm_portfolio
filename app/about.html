@@ -28,11 +28,11 @@
     <![endif]-->
 
   <nav class="navbar">
-    <a href="index.html"><h1>Close X</h1></a>
+    <a href="index.html"><h1>✕</h1></a>
     <h6>UI Design & Development</h6>
   </nav>
-  
-  <div class=" about">
+
+  <div class="about animsition" data-animsition-in="fade-in-down" data-animsition-out="fade-out-up-sm">
 
     <div class="box">
       <div class="image"></div>
@@ -48,21 +48,26 @@
         <a href="mailto:me@philipmadeley.com">me@philipmadeley.com</a>
       </p>
       <section>
-        <a href="https://twitter.com/PhilipMadeley">
-          <span class="icon-twitter"></span>
+        <a href="https://www.linkedin.com/in/pjmadeley" target='_blank'>
+          <svg class="icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
         </a>
-        <a href="http://instagram.com/philipmadeley">
-          <span class="icon-instagram"></span>
+        <a href="https://twitter.com/PhilipMadeley" target='_blank'>
+          <svg class="icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
         </a>
-        <a href="https://www.linkedin.com/in/pjmadeley">
-          <span class="icon-linkedin"></span>
+        <a href="http://instagram.com/philipmadeley" target='_blank'>
+          <svg class="icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
         </a>
+        <a href="https://dribbble.com/philipmadeley" target='_blank'>
+          <svg class="icon-dribbble"><use xlink:href="#icon-dribbble"></use></svg>
+        </a>
+
       </section>
       <p>
         My photo was taken by photographer
         <a href="http://fabianparkes.com/index.html" target="_blank">Fabian Parkes</a>
       </p>
     </section>
+  </div>
 
 
   <script>
@@ -90,6 +95,14 @@
 
   <!-- build:js scripts/main.js -->
   <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js scripts/animsition.min.js -->
+  <script src="scripts/animsition.min.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js scripts/svg4everybody.js -->
+  <script src="scripts/svg4everybody.js"></script>
   <!-- endbuild -->
 
 </body>

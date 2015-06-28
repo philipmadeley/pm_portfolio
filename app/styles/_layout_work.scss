@@ -138,10 +138,6 @@
 }
 //end work mobile
 
-@include susy-breakpoint (340px, $mobile) {
-
-
-}
 @include susy-breakpoint (600px, $tablet) {
   .work {
 
@@ -240,4 +236,11 @@
 
   }
   //work
+}
+
+
+@include susy-media(1px 1024px) {
+  .work article .col2 {
+    margin-top: 30px;
+  }
 }

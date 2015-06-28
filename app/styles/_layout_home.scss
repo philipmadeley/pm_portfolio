@@ -63,16 +63,6 @@ $projects: me ro an sb ob da ca cs;
     height: 100%;
     top: 0;
     left: 0;
-    //-webkit-filter: blur(10px);
-    //filter: blur(10px);
-    //-moz-filter: blur(10px);
-    }
-    &:hover:before, &:active:before {
-      //-webkit-filter: blur(0px);
-      //filter: blur(0px);
-      //-moz-filter: blur(0px);
-      //@include transition(1s filter linear);
-      //@include transition(1s -webkit-filter linear);
     }
     a:hover:after, a:active:after {
         @include transition(background-color 300ms 300ms, color 300ms);
@@ -145,34 +135,14 @@ $projects: me ro an sb ob da ca cs;
       background: white;
     }
     .container {
-        //@include layout($fullWidth fluid no-gutters);
-        /*display: flex;
-        overflow: hidden;
-        position: absolute;
-        width: auto;
-        overflow-y: hidden;
-        padding-top:0;
-        */
 
         section.showcase {
             @include span(4 of 12 fluid no-gutters);
-            //border: none;
-            //max-height: 100%;
-            //clear:none;
-            //height: 100vh;
 
         &:last-child {
             //@include span(2 of 10);
         }
 
-            hgroup {
-              /*  white-space: normal;
-                height: 120px;
-                @include absolute(bottom 200px);
-                width: 100%;
-                left: 0;
-                */
-            }
          &.project-me a:after {
              background: rgba($me, .8);
          }

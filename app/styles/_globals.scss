@@ -50,10 +50,18 @@ a {
   &:hover {
          text-decoration: none;
          color: $headings;
-         cursor: pointer;
     }
 }
 
 body {
   font-family: 'avenir', Helvetica, Arial, sans-serif;
+}
+
+ul {
+  margin-bottom: 30px;
+  li {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 0;
+  }
 }

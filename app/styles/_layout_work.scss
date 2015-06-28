@@ -22,6 +22,7 @@
 
     &:hover {
       text-decoration:none;
+      cursor: pointer;
     }
 
     svg {
@@ -45,6 +46,9 @@
   }
   a {
     @include links;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   svg {
@@ -110,6 +114,11 @@
       padding: 10% 0;
       @include container(800px);
     }
+    &--multi img {
+      padding: 5% 0;
+      @include full;
+      background: dark(0.1);
+  }
 
   }
   footer {
